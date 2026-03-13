@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 12% 4%;
+    --foreground: 0 0% 92%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 42 88% 63%;
+    --primary-foreground: 240 12% 4%;
+
+    --secondary: 240 6% 14%;
+    --secondary-foreground: 0 0% 70%;
+
+    --muted: 240 6% 14%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 42 88% 63%;
+    --accent-foreground: 240 12% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 92%;
+
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 42 88% 63%;
+
+    --radius: 0.375rem;
+
+    --sidebar-background: 240 8% 6%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 42 88% 63%;
+    --sidebar-primary-foreground: 240 12% 4%;
+    --sidebar-accent: 240 6% 14%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 240 6% 18%;
+    --sidebar-ring: 42 88% 63%;
+
+    --panel: 240 8% 10%;
+    --panel-foreground: 0 0% 85%;
+    --gold-glow: 42 88% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .font-mono-display {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .font-sans {
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+
+  .gold-glow {
+    box-shadow: 0 0 20px hsl(42 88% 63% / 0.15);
+  }
+
+  .panel-elevated {
+    background: hsl(var(--panel));
+    border: 1px solid hsl(var(--border));
+  }
+}
